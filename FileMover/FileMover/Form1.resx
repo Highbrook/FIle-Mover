@@ -117,4 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Guide:
+- Click the "Open" button for the number 1 "From" field
+- Select the folder you wish to transfer data from
+- Click the "Open" button for the number 1 "To" field 
+- Select the folder you wish to transfer data to
+- Repeat entering the values in that order (From - To) into
+each row for which you wish to transfer data
+
+- Use the "Execute" button for each row you wish to transfer
+data from and to.
+
+- Use the "Clear" button in order to clear the fields or if you've
+opened the wrong folder path.
+</value>
+  </data>
 </root>

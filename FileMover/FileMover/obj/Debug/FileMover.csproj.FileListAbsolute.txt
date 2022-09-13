@@ -1,0 +1,11 @@
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\bin\Debug\FileMover.exe.config
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\bin\Debug\FileMover.exe
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\bin\Debug\FileMover.pdb
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\obj\Debug\FileMover.csproj.AssemblyReference.cache
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\obj\Debug\FileMover.csproj.SuggestedBindingRedirects.cache
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\obj\Debug\FileMover.Form1.resources
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\obj\Debug\FileMover.Properties.Resources.resources
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\obj\Debug\FileMover.csproj.GenerateResource.cache
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\obj\Debug\FileMover.csproj.CoreCompileInputs.cache
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\obj\Debug\FileMover.exe
+D:\UnityProjects\Git\FIle-Mover\FileMover\FileMover\obj\Debug\FileMover.pdb
