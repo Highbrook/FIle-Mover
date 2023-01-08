@@ -81,11 +81,15 @@
             this.executeBtnSix = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.CountrySelectCheckBox = new System.Windows.Forms.CheckedListBox();
+            this.ExecuteAllBtn = new System.Windows.Forms.Button();
+            this.FilesRemainingLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // executeBtnOne
             // 
-            this.executeBtnOne.Location = new System.Drawing.Point(892, 29);
+            this.executeBtnOne.Location = new System.Drawing.Point(894, 37);
             this.executeBtnOne.Name = "executeBtnOne";
             this.executeBtnOne.Size = new System.Drawing.Size(64, 22);
             this.executeBtnOne.TabIndex = 0;
@@ -95,7 +99,7 @@
             // 
             // fromInputOne
             // 
-            this.fromInputOne.Location = new System.Drawing.Point(110, 31);
+            this.fromInputOne.Location = new System.Drawing.Point(112, 39);
             this.fromInputOne.Name = "fromInputOne";
             this.fromInputOne.Size = new System.Drawing.Size(337, 20);
             this.fromInputOne.TabIndex = 2;
@@ -103,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(546, 15);
+            this.label2.Location = new System.Drawing.Point(548, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 13);
             this.label2.TabIndex = 1;
@@ -111,14 +115,14 @@
             // 
             // toInputOne
             // 
-            this.toInputOne.Location = new System.Drawing.Point(549, 31);
+            this.toInputOne.Location = new System.Drawing.Point(551, 39);
             this.toInputOne.Name = "toInputOne";
             this.toInputOne.Size = new System.Drawing.Size(337, 20);
             this.toInputOne.TabIndex = 2;
             // 
             // fromBtnOne
             // 
-            this.fromBtnOne.Location = new System.Drawing.Point(29, 30);
+            this.fromBtnOne.Location = new System.Drawing.Point(31, 38);
             this.fromBtnOne.Name = "fromBtnOne";
             this.fromBtnOne.Size = new System.Drawing.Size(75, 21);
             this.fromBtnOne.TabIndex = 3;
@@ -129,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(110, 15);
+            this.label1.Location = new System.Drawing.Point(112, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 1;
@@ -137,7 +141,7 @@
             // 
             // toBtnOne
             // 
-            this.toBtnOne.Location = new System.Drawing.Point(468, 30);
+            this.toBtnOne.Location = new System.Drawing.Point(470, 38);
             this.toBtnOne.Name = "toBtnOne";
             this.toBtnOne.Size = new System.Drawing.Size(75, 20);
             this.toBtnOne.TabIndex = 3;
@@ -147,7 +151,7 @@
             // 
             // fromDateTimePicker
             // 
-            this.fromDateTimePicker.Location = new System.Drawing.Point(29, 286);
+            this.fromDateTimePicker.Location = new System.Drawing.Point(31, 294);
             this.fromDateTimePicker.Name = "fromDateTimePicker";
             this.fromDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fromDateTimePicker.TabIndex = 4;
@@ -155,7 +159,7 @@
             // 
             // toDateTimePicker
             // 
-            this.toDateTimePicker.Location = new System.Drawing.Point(468, 286);
+            this.toDateTimePicker.Location = new System.Drawing.Point(470, 294);
             this.toDateTimePicker.Name = "toDateTimePicker";
             this.toDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.toDateTimePicker.TabIndex = 4;
@@ -164,7 +168,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 15);
+            this.label3.Location = new System.Drawing.Point(31, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 1;
@@ -173,7 +177,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(110, 62);
+            this.label4.Location = new System.Drawing.Point(112, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 1;
@@ -182,7 +186,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 62);
+            this.label5.Location = new System.Drawing.Point(31, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(13, 13);
             this.label5.TabIndex = 1;
@@ -191,7 +195,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(546, 62);
+            this.label6.Location = new System.Drawing.Point(548, 70);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 13);
             this.label6.TabIndex = 1;
@@ -199,14 +203,14 @@
             // 
             // fromInputTwo
             // 
-            this.fromInputTwo.Location = new System.Drawing.Point(110, 78);
+            this.fromInputTwo.Location = new System.Drawing.Point(112, 86);
             this.fromInputTwo.Name = "fromInputTwo";
             this.fromInputTwo.Size = new System.Drawing.Size(337, 20);
             this.fromInputTwo.TabIndex = 2;
             // 
             // toInputTwo
             // 
-            this.toInputTwo.Location = new System.Drawing.Point(549, 78);
+            this.toInputTwo.Location = new System.Drawing.Point(551, 86);
             this.toInputTwo.Name = "toInputTwo";
             this.toInputTwo.Size = new System.Drawing.Size(337, 20);
             this.toInputTwo.TabIndex = 2;
@@ -214,7 +218,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(110, 107);
+            this.label7.Location = new System.Drawing.Point(112, 115);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(33, 13);
             this.label7.TabIndex = 1;
@@ -223,7 +227,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 107);
+            this.label8.Location = new System.Drawing.Point(31, 115);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 13);
             this.label8.TabIndex = 1;
@@ -232,7 +236,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(546, 107);
+            this.label9.Location = new System.Drawing.Point(548, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(23, 13);
             this.label9.TabIndex = 1;
@@ -240,14 +244,14 @@
             // 
             // fromInputThree
             // 
-            this.fromInputThree.Location = new System.Drawing.Point(110, 123);
+            this.fromInputThree.Location = new System.Drawing.Point(112, 131);
             this.fromInputThree.Name = "fromInputThree";
             this.fromInputThree.Size = new System.Drawing.Size(337, 20);
             this.fromInputThree.TabIndex = 2;
             // 
             // toInputThree
             // 
-            this.toInputThree.Location = new System.Drawing.Point(549, 123);
+            this.toInputThree.Location = new System.Drawing.Point(551, 131);
             this.toInputThree.Name = "toInputThree";
             this.toInputThree.Size = new System.Drawing.Size(337, 20);
             this.toInputThree.TabIndex = 2;
@@ -255,7 +259,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(110, 152);
+            this.label10.Location = new System.Drawing.Point(112, 160);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(33, 13);
             this.label10.TabIndex = 1;
@@ -264,7 +268,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(29, 152);
+            this.label11.Location = new System.Drawing.Point(31, 160);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(13, 13);
             this.label11.TabIndex = 1;
@@ -273,7 +277,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(546, 152);
+            this.label12.Location = new System.Drawing.Point(548, 160);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(23, 13);
             this.label12.TabIndex = 1;
@@ -281,14 +285,14 @@
             // 
             // fromInputFour
             // 
-            this.fromInputFour.Location = new System.Drawing.Point(110, 168);
+            this.fromInputFour.Location = new System.Drawing.Point(112, 176);
             this.fromInputFour.Name = "fromInputFour";
             this.fromInputFour.Size = new System.Drawing.Size(337, 20);
             this.fromInputFour.TabIndex = 2;
             // 
             // toInputFour
             // 
-            this.toInputFour.Location = new System.Drawing.Point(549, 168);
+            this.toInputFour.Location = new System.Drawing.Point(551, 176);
             this.toInputFour.Name = "toInputFour";
             this.toInputFour.Size = new System.Drawing.Size(337, 20);
             this.toInputFour.TabIndex = 2;
@@ -296,7 +300,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(110, 199);
+            this.label13.Location = new System.Drawing.Point(112, 207);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(33, 13);
             this.label13.TabIndex = 1;
@@ -305,7 +309,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(29, 199);
+            this.label14.Location = new System.Drawing.Point(31, 207);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(13, 13);
             this.label14.TabIndex = 1;
@@ -314,7 +318,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(546, 199);
+            this.label15.Location = new System.Drawing.Point(548, 207);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(23, 13);
             this.label15.TabIndex = 1;
@@ -322,14 +326,14 @@
             // 
             // fromInputFive
             // 
-            this.fromInputFive.Location = new System.Drawing.Point(110, 215);
+            this.fromInputFive.Location = new System.Drawing.Point(112, 223);
             this.fromInputFive.Name = "fromInputFive";
             this.fromInputFive.Size = new System.Drawing.Size(337, 20);
             this.fromInputFive.TabIndex = 2;
             // 
             // toInputFive
             // 
-            this.toInputFive.Location = new System.Drawing.Point(549, 215);
+            this.toInputFive.Location = new System.Drawing.Point(551, 223);
             this.toInputFive.Name = "toInputFive";
             this.toInputFive.Size = new System.Drawing.Size(337, 20);
             this.toInputFive.TabIndex = 2;
@@ -337,7 +341,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(110, 244);
+            this.label16.Location = new System.Drawing.Point(112, 252);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(33, 13);
             this.label16.TabIndex = 1;
@@ -346,7 +350,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(29, 244);
+            this.label17.Location = new System.Drawing.Point(31, 252);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(13, 13);
             this.label17.TabIndex = 1;
@@ -355,7 +359,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(546, 244);
+            this.label18.Location = new System.Drawing.Point(548, 252);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(23, 13);
             this.label18.TabIndex = 1;
@@ -363,21 +367,21 @@
             // 
             // fromInputSix
             // 
-            this.fromInputSix.Location = new System.Drawing.Point(110, 260);
+            this.fromInputSix.Location = new System.Drawing.Point(112, 268);
             this.fromInputSix.Name = "fromInputSix";
             this.fromInputSix.Size = new System.Drawing.Size(337, 20);
             this.fromInputSix.TabIndex = 2;
             // 
             // toInputSix
             // 
-            this.toInputSix.Location = new System.Drawing.Point(549, 260);
+            this.toInputSix.Location = new System.Drawing.Point(551, 268);
             this.toInputSix.Name = "toInputSix";
             this.toInputSix.Size = new System.Drawing.Size(337, 20);
             this.toInputSix.TabIndex = 2;
             // 
             // fromBtnTwo
             // 
-            this.fromBtnTwo.Location = new System.Drawing.Point(29, 77);
+            this.fromBtnTwo.Location = new System.Drawing.Point(31, 85);
             this.fromBtnTwo.Name = "fromBtnTwo";
             this.fromBtnTwo.Size = new System.Drawing.Size(75, 21);
             this.fromBtnTwo.TabIndex = 5;
@@ -387,7 +391,7 @@
             // 
             // fromBtnThree
             // 
-            this.fromBtnThree.Location = new System.Drawing.Point(29, 123);
+            this.fromBtnThree.Location = new System.Drawing.Point(31, 131);
             this.fromBtnThree.Name = "fromBtnThree";
             this.fromBtnThree.Size = new System.Drawing.Size(75, 21);
             this.fromBtnThree.TabIndex = 6;
@@ -397,7 +401,7 @@
             // 
             // fromBtnFour
             // 
-            this.fromBtnFour.Location = new System.Drawing.Point(29, 168);
+            this.fromBtnFour.Location = new System.Drawing.Point(31, 176);
             this.fromBtnFour.Name = "fromBtnFour";
             this.fromBtnFour.Size = new System.Drawing.Size(75, 21);
             this.fromBtnFour.TabIndex = 7;
@@ -407,7 +411,7 @@
             // 
             // fromBtnFive
             // 
-            this.fromBtnFive.Location = new System.Drawing.Point(29, 215);
+            this.fromBtnFive.Location = new System.Drawing.Point(31, 223);
             this.fromBtnFive.Name = "fromBtnFive";
             this.fromBtnFive.Size = new System.Drawing.Size(75, 21);
             this.fromBtnFive.TabIndex = 8;
@@ -417,7 +421,7 @@
             // 
             // fromBtnSix
             // 
-            this.fromBtnSix.Location = new System.Drawing.Point(29, 259);
+            this.fromBtnSix.Location = new System.Drawing.Point(31, 267);
             this.fromBtnSix.Name = "fromBtnSix";
             this.fromBtnSix.Size = new System.Drawing.Size(75, 21);
             this.fromBtnSix.TabIndex = 9;
@@ -427,7 +431,7 @@
             // 
             // toBtnTwo
             // 
-            this.toBtnTwo.Location = new System.Drawing.Point(468, 77);
+            this.toBtnTwo.Location = new System.Drawing.Point(470, 85);
             this.toBtnTwo.Name = "toBtnTwo";
             this.toBtnTwo.Size = new System.Drawing.Size(75, 20);
             this.toBtnTwo.TabIndex = 10;
@@ -437,7 +441,7 @@
             // 
             // toBtnThree
             // 
-            this.toBtnThree.Location = new System.Drawing.Point(468, 124);
+            this.toBtnThree.Location = new System.Drawing.Point(470, 132);
             this.toBtnThree.Name = "toBtnThree";
             this.toBtnThree.Size = new System.Drawing.Size(75, 20);
             this.toBtnThree.TabIndex = 11;
@@ -447,7 +451,7 @@
             // 
             // toBtnFour
             // 
-            this.toBtnFour.Location = new System.Drawing.Point(468, 168);
+            this.toBtnFour.Location = new System.Drawing.Point(470, 176);
             this.toBtnFour.Name = "toBtnFour";
             this.toBtnFour.Size = new System.Drawing.Size(75, 20);
             this.toBtnFour.TabIndex = 12;
@@ -457,7 +461,7 @@
             // 
             // toBtnFive
             // 
-            this.toBtnFive.Location = new System.Drawing.Point(468, 216);
+            this.toBtnFive.Location = new System.Drawing.Point(470, 224);
             this.toBtnFive.Name = "toBtnFive";
             this.toBtnFive.Size = new System.Drawing.Size(75, 20);
             this.toBtnFive.TabIndex = 13;
@@ -467,7 +471,7 @@
             // 
             // toBtnSix
             // 
-            this.toBtnSix.Location = new System.Drawing.Point(468, 259);
+            this.toBtnSix.Location = new System.Drawing.Point(470, 267);
             this.toBtnSix.Name = "toBtnSix";
             this.toBtnSix.Size = new System.Drawing.Size(75, 20);
             this.toBtnSix.TabIndex = 14;
@@ -477,7 +481,7 @@
             // 
             // executeBtnTwo
             // 
-            this.executeBtnTwo.Location = new System.Drawing.Point(892, 75);
+            this.executeBtnTwo.Location = new System.Drawing.Point(894, 83);
             this.executeBtnTwo.Name = "executeBtnTwo";
             this.executeBtnTwo.Size = new System.Drawing.Size(64, 22);
             this.executeBtnTwo.TabIndex = 15;
@@ -487,7 +491,7 @@
             // 
             // executeBtnThree
             // 
-            this.executeBtnThree.Location = new System.Drawing.Point(892, 122);
+            this.executeBtnThree.Location = new System.Drawing.Point(894, 130);
             this.executeBtnThree.Name = "executeBtnThree";
             this.executeBtnThree.Size = new System.Drawing.Size(64, 22);
             this.executeBtnThree.TabIndex = 16;
@@ -497,7 +501,7 @@
             // 
             // executeBtnFour
             // 
-            this.executeBtnFour.Location = new System.Drawing.Point(892, 166);
+            this.executeBtnFour.Location = new System.Drawing.Point(894, 174);
             this.executeBtnFour.Name = "executeBtnFour";
             this.executeBtnFour.Size = new System.Drawing.Size(64, 22);
             this.executeBtnFour.TabIndex = 17;
@@ -507,7 +511,7 @@
             // 
             // executeBtnFive
             // 
-            this.executeBtnFive.Location = new System.Drawing.Point(892, 213);
+            this.executeBtnFive.Location = new System.Drawing.Point(894, 221);
             this.executeBtnFive.Name = "executeBtnFive";
             this.executeBtnFive.Size = new System.Drawing.Size(64, 22);
             this.executeBtnFive.TabIndex = 18;
@@ -517,7 +521,7 @@
             // 
             // executeBtnSix
             // 
-            this.executeBtnSix.Location = new System.Drawing.Point(892, 257);
+            this.executeBtnSix.Location = new System.Drawing.Point(894, 265);
             this.executeBtnSix.Name = "executeBtnSix";
             this.executeBtnSix.Size = new System.Drawing.Size(64, 22);
             this.executeBtnSix.TabIndex = 19;
@@ -538,17 +542,72 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(29, 348);
+            this.label19.Location = new System.Drawing.Point(28, 328);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(295, 169);
+            this.label19.Size = new System.Drawing.Size(295, 221);
             this.label19.TabIndex = 21;
             this.label19.Text = resources.GetString("label19.Text");
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(274, 559);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(470, 23);
+            this.progressBar1.TabIndex = 22;
+            // 
+            // CountrySelectCheckBox
+            // 
+            this.CountrySelectCheckBox.CheckOnClick = true;
+            this.CountrySelectCheckBox.FormattingEnabled = true;
+            this.CountrySelectCheckBox.Items.AddRange(new object[] {
+            "Austria",
+            "Croatia",
+            "Czech",
+            "France",
+            "Germany",
+            "Italy",
+            "Montenegro",
+            "Poland",
+            "Romania",
+            "Serbia",
+            "Slovenia"});
+            this.CountrySelectCheckBox.Location = new System.Drawing.Point(761, 328);
+            this.CountrySelectCheckBox.Name = "CountrySelectCheckBox";
+            this.CountrySelectCheckBox.Size = new System.Drawing.Size(197, 229);
+            this.CountrySelectCheckBox.Sorted = true;
+            this.CountrySelectCheckBox.TabIndex = 23;
+            // 
+            // ExecuteAllBtn
+            // 
+            this.ExecuteAllBtn.Location = new System.Drawing.Point(102, 559);
+            this.ExecuteAllBtn.Name = "ExecuteAllBtn";
+            this.ExecuteAllBtn.Size = new System.Drawing.Size(86, 22);
+            this.ExecuteAllBtn.TabIndex = 24;
+            this.ExecuteAllBtn.Text = "Execute All";
+            this.ExecuteAllBtn.UseVisualStyleBackColor = true;
+            this.ExecuteAllBtn.Click += new System.EventHandler(this.ExecuteAllBtn_Click);
+            // 
+            // FilesRemainingLabel
+            // 
+            this.FilesRemainingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FilesRemainingLabel.AutoSize = true;
+            this.FilesRemainingLabel.Location = new System.Drawing.Point(485, 563);
+            this.FilesRemainingLabel.Name = "FilesRemainingLabel";
+            this.FilesRemainingLabel.Size = new System.Drawing.Size(30, 13);
+            this.FilesRemainingLabel.TabIndex = 25;
+            this.FilesRemainingLabel.Text = "0 / 0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 593);
+            this.Controls.Add(this.FilesRemainingLabel);
+            this.Controls.Add(this.ExecuteAllBtn);
+            this.Controls.Add(this.CountrySelectCheckBox);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.executeBtnSix);
@@ -662,6 +721,10 @@
         private System.Windows.Forms.Button executeBtnSix;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.CheckedListBox CountrySelectCheckBox;
+        private System.Windows.Forms.Button ExecuteAllBtn;
+        private System.Windows.Forms.Label FilesRemainingLabel;
     }
 }
 
