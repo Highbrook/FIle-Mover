@@ -119,7 +119,6 @@
   </resheader>
   <data name="label19.Text" xml:space="preserve">
     <value>Guide:
-- Check the parameter (country) you want to search for
 - Click the "Open" button for the number 1 "From" field
 - Select the folder you wish to transfer data from
 - Click the "Open" button for the number 1 "To" field 
@@ -133,8 +132,23 @@ data from and to.
 - Use the "Execute All" button to execute transfering of all
 rows with a valid From and To field input.
 
-- Use the "Clear" button in order to clear the fields or if you've
-opened the wrong folder path.
+- Use the "Clear All" button in order to clear ALL fields or if you've
+opened the wrong folder path use "X" for individual rows
+.
+</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>- Select the date of the directories from when to when
+you wish to transfer files, example:
+from: 05-01-23 to 07-01-23
+It will look at the date of creation for the folder regardless
+of the folders name.
+
+- Use the "Keyword" field to input a keyword, any files with
+this keyword in their name will be affected by the "Execute" 
+function.
+
+
 </value>
   </data>
 </root>
