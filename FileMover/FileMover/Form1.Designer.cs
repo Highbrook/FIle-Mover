@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.executeBtnOne = new System.Windows.Forms.Button();
-            this.fromInputOne = new System.Windows.Forms.TextBox();
+            this.fromInput1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.toInputOne = new System.Windows.Forms.TextBox();
+            this.toInput1 = new System.Windows.Forms.TextBox();
             this.fromBtnOne = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.toBtnOne = new System.Windows.Forms.Button();
@@ -42,28 +42,28 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.fromInputTwo = new System.Windows.Forms.TextBox();
-            this.toInputTwo = new System.Windows.Forms.TextBox();
+            this.fromInput2 = new System.Windows.Forms.TextBox();
+            this.toInput2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.fromInputThree = new System.Windows.Forms.TextBox();
-            this.toInputThree = new System.Windows.Forms.TextBox();
+            this.fromInput3 = new System.Windows.Forms.TextBox();
+            this.toInput3 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.fromInputFour = new System.Windows.Forms.TextBox();
-            this.toInputFour = new System.Windows.Forms.TextBox();
+            this.fromInput4 = new System.Windows.Forms.TextBox();
+            this.toInput4 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.fromInputFive = new System.Windows.Forms.TextBox();
-            this.toInputFive = new System.Windows.Forms.TextBox();
+            this.fromInput5 = new System.Windows.Forms.TextBox();
+            this.toInput5 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.fromInputSix = new System.Windows.Forms.TextBox();
-            this.toInputSix = new System.Windows.Forms.TextBox();
+            this.fromInput6 = new System.Windows.Forms.TextBox();
+            this.toInput6 = new System.Windows.Forms.TextBox();
             this.fromBtnTwo = new System.Windows.Forms.Button();
             this.fromBtnThree = new System.Windows.Forms.Button();
             this.fromBtnFour = new System.Windows.Forms.Button();
@@ -103,12 +103,12 @@
             this.executeBtnOne.UseVisualStyleBackColor = true;
             this.executeBtnOne.Click += new System.EventHandler(this.button1_Click);
             // 
-            // fromInputOne
+            // fromInput1
             // 
-            this.fromInputOne.Location = new System.Drawing.Point(125, 39);
-            this.fromInputOne.Name = "fromInputOne";
-            this.fromInputOne.Size = new System.Drawing.Size(337, 20);
-            this.fromInputOne.TabIndex = 2;
+            this.fromInput1.Location = new System.Drawing.Point(125, 39);
+            this.fromInput1.Name = "fromInput1";
+            this.fromInput1.Size = new System.Drawing.Size(337, 20);
+            this.fromInput1.TabIndex = 2;
             // 
             // label2
             // 
@@ -119,12 +119,12 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "To:";
             // 
-            // toInputOne
+            // toInput1
             // 
-            this.toInputOne.Location = new System.Drawing.Point(564, 39);
-            this.toInputOne.Name = "toInputOne";
-            this.toInputOne.Size = new System.Drawing.Size(337, 20);
-            this.toInputOne.TabIndex = 2;
+            this.toInput1.Location = new System.Drawing.Point(564, 39);
+            this.toInput1.Name = "toInput1";
+            this.toInput1.Size = new System.Drawing.Size(337, 20);
+            this.toInput1.TabIndex = 2;
             // 
             // fromBtnOne
             // 
@@ -207,19 +207,19 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "To:";
             // 
-            // fromInputTwo
+            // fromInput2
             // 
-            this.fromInputTwo.Location = new System.Drawing.Point(125, 86);
-            this.fromInputTwo.Name = "fromInputTwo";
-            this.fromInputTwo.Size = new System.Drawing.Size(337, 20);
-            this.fromInputTwo.TabIndex = 2;
+            this.fromInput2.Location = new System.Drawing.Point(125, 86);
+            this.fromInput2.Name = "fromInput2";
+            this.fromInput2.Size = new System.Drawing.Size(337, 20);
+            this.fromInput2.TabIndex = 2;
             // 
-            // toInputTwo
+            // toInput2
             // 
-            this.toInputTwo.Location = new System.Drawing.Point(564, 86);
-            this.toInputTwo.Name = "toInputTwo";
-            this.toInputTwo.Size = new System.Drawing.Size(337, 20);
-            this.toInputTwo.TabIndex = 2;
+            this.toInput2.Location = new System.Drawing.Point(564, 86);
+            this.toInput2.Name = "toInput2";
+            this.toInput2.Size = new System.Drawing.Size(337, 20);
+            this.toInput2.TabIndex = 2;
             // 
             // label7
             // 
@@ -248,19 +248,19 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "To:";
             // 
-            // fromInputThree
+            // fromInput3
             // 
-            this.fromInputThree.Location = new System.Drawing.Point(125, 131);
-            this.fromInputThree.Name = "fromInputThree";
-            this.fromInputThree.Size = new System.Drawing.Size(337, 20);
-            this.fromInputThree.TabIndex = 2;
+            this.fromInput3.Location = new System.Drawing.Point(125, 131);
+            this.fromInput3.Name = "fromInput3";
+            this.fromInput3.Size = new System.Drawing.Size(337, 20);
+            this.fromInput3.TabIndex = 2;
             // 
-            // toInputThree
+            // toInput3
             // 
-            this.toInputThree.Location = new System.Drawing.Point(564, 131);
-            this.toInputThree.Name = "toInputThree";
-            this.toInputThree.Size = new System.Drawing.Size(337, 20);
-            this.toInputThree.TabIndex = 2;
+            this.toInput3.Location = new System.Drawing.Point(564, 131);
+            this.toInput3.Name = "toInput3";
+            this.toInput3.Size = new System.Drawing.Size(337, 20);
+            this.toInput3.TabIndex = 2;
             // 
             // label10
             // 
@@ -289,19 +289,19 @@
             this.label12.TabIndex = 1;
             this.label12.Text = "To:";
             // 
-            // fromInputFour
+            // fromInput4
             // 
-            this.fromInputFour.Location = new System.Drawing.Point(125, 176);
-            this.fromInputFour.Name = "fromInputFour";
-            this.fromInputFour.Size = new System.Drawing.Size(337, 20);
-            this.fromInputFour.TabIndex = 2;
+            this.fromInput4.Location = new System.Drawing.Point(125, 176);
+            this.fromInput4.Name = "fromInput4";
+            this.fromInput4.Size = new System.Drawing.Size(337, 20);
+            this.fromInput4.TabIndex = 2;
             // 
-            // toInputFour
+            // toInput4
             // 
-            this.toInputFour.Location = new System.Drawing.Point(564, 176);
-            this.toInputFour.Name = "toInputFour";
-            this.toInputFour.Size = new System.Drawing.Size(337, 20);
-            this.toInputFour.TabIndex = 2;
+            this.toInput4.Location = new System.Drawing.Point(564, 176);
+            this.toInput4.Name = "toInput4";
+            this.toInput4.Size = new System.Drawing.Size(337, 20);
+            this.toInput4.TabIndex = 2;
             // 
             // label13
             // 
@@ -330,19 +330,19 @@
             this.label15.TabIndex = 1;
             this.label15.Text = "To:";
             // 
-            // fromInputFive
+            // fromInput5
             // 
-            this.fromInputFive.Location = new System.Drawing.Point(125, 223);
-            this.fromInputFive.Name = "fromInputFive";
-            this.fromInputFive.Size = new System.Drawing.Size(337, 20);
-            this.fromInputFive.TabIndex = 2;
+            this.fromInput5.Location = new System.Drawing.Point(125, 223);
+            this.fromInput5.Name = "fromInput5";
+            this.fromInput5.Size = new System.Drawing.Size(337, 20);
+            this.fromInput5.TabIndex = 2;
             // 
-            // toInputFive
+            // toInput5
             // 
-            this.toInputFive.Location = new System.Drawing.Point(564, 223);
-            this.toInputFive.Name = "toInputFive";
-            this.toInputFive.Size = new System.Drawing.Size(337, 20);
-            this.toInputFive.TabIndex = 2;
+            this.toInput5.Location = new System.Drawing.Point(564, 223);
+            this.toInput5.Name = "toInput5";
+            this.toInput5.Size = new System.Drawing.Size(337, 20);
+            this.toInput5.TabIndex = 2;
             // 
             // label16
             // 
@@ -371,19 +371,19 @@
             this.label18.TabIndex = 1;
             this.label18.Text = "To:";
             // 
-            // fromInputSix
+            // fromInput6
             // 
-            this.fromInputSix.Location = new System.Drawing.Point(125, 268);
-            this.fromInputSix.Name = "fromInputSix";
-            this.fromInputSix.Size = new System.Drawing.Size(337, 20);
-            this.fromInputSix.TabIndex = 2;
+            this.fromInput6.Location = new System.Drawing.Point(125, 268);
+            this.fromInput6.Name = "fromInput6";
+            this.fromInput6.Size = new System.Drawing.Size(337, 20);
+            this.fromInput6.TabIndex = 2;
             // 
-            // toInputSix
+            // toInput6
             // 
-            this.toInputSix.Location = new System.Drawing.Point(564, 268);
-            this.toInputSix.Name = "toInputSix";
-            this.toInputSix.Size = new System.Drawing.Size(337, 20);
-            this.toInputSix.TabIndex = 2;
+            this.toInput6.Location = new System.Drawing.Point(564, 268);
+            this.toInput6.Name = "toInput6";
+            this.toInput6.Size = new System.Drawing.Size(337, 20);
+            this.toInput6.TabIndex = 2;
             // 
             // fromBtnTwo
             // 
@@ -715,29 +715,29 @@
             this.Controls.Add(this.fromDateTimePicker);
             this.Controls.Add(this.toBtnOne);
             this.Controls.Add(this.fromBtnOne);
-            this.Controls.Add(this.toInputSix);
-            this.Controls.Add(this.toInputFive);
-            this.Controls.Add(this.toInputFour);
-            this.Controls.Add(this.toInputThree);
-            this.Controls.Add(this.toInputTwo);
-            this.Controls.Add(this.toInputOne);
-            this.Controls.Add(this.fromInputSix);
+            this.Controls.Add(this.toInput6);
+            this.Controls.Add(this.toInput5);
+            this.Controls.Add(this.toInput4);
+            this.Controls.Add(this.toInput3);
+            this.Controls.Add(this.toInput2);
+            this.Controls.Add(this.toInput1);
+            this.Controls.Add(this.fromInput6);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.fromInputFive);
+            this.Controls.Add(this.fromInput5);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.fromInputFour);
+            this.Controls.Add(this.fromInput4);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.fromInputThree);
+            this.Controls.Add(this.fromInput3);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.fromInputTwo);
+            this.Controls.Add(this.fromInput2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.fromInputOne);
+            this.Controls.Add(this.fromInput1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
@@ -748,6 +748,8 @@
             this.Controls.Add(this.executeBtnOne);
             this.Name = "Form1";
             this.Text = "Transfer Tool";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -756,9 +758,9 @@
         #endregion
 
         private System.Windows.Forms.Button executeBtnOne;
-        private System.Windows.Forms.TextBox fromInputOne;
+        private System.Windows.Forms.TextBox fromInput1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox toInputOne;
+        private System.Windows.Forms.TextBox toInput1;
         private System.Windows.Forms.Button fromBtnOne;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button toBtnOne;
@@ -768,28 +770,28 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox fromInputTwo;
-        private System.Windows.Forms.TextBox toInputTwo;
+        private System.Windows.Forms.TextBox fromInput2;
+        private System.Windows.Forms.TextBox toInput2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox fromInputThree;
-        private System.Windows.Forms.TextBox toInputThree;
+        private System.Windows.Forms.TextBox fromInput3;
+        private System.Windows.Forms.TextBox toInput3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox fromInputFour;
-        private System.Windows.Forms.TextBox toInputFour;
+        private System.Windows.Forms.TextBox fromInput4;
+        private System.Windows.Forms.TextBox toInput4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox fromInputFive;
-        private System.Windows.Forms.TextBox toInputFive;
+        private System.Windows.Forms.TextBox fromInput5;
+        private System.Windows.Forms.TextBox toInput5;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox fromInputSix;
-        private System.Windows.Forms.TextBox toInputSix;
+        private System.Windows.Forms.TextBox fromInput6;
+        private System.Windows.Forms.TextBox toInput6;
         private System.Windows.Forms.Button fromBtnTwo;
         private System.Windows.Forms.Button fromBtnThree;
         private System.Windows.Forms.Button fromBtnFour;

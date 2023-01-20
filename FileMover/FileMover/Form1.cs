@@ -22,19 +22,24 @@ namespace FileMover
         private List<string> fromFolders;
         private int toPathCode = 0;
         private int fromPathCode = 1;
+        private string documentsPath;
+        private string fileName;
+        private string fromFileName = "fromFilePaths.txt";
+        private string toFileName = "toFilePaths.txt";
         public Form1()
         {
             InitializeComponent();
+
+            documentsPath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            fileName = "FileMover";
+            documentsPath = System.IO.Path.Combine(documentsPath, fileName);
+
             folderPaths = new List<string>();
             toFolders = new List<string>();
             fromFolders = new List<string>();
         }
 
-        private void fromBrowser_HelpRequest(object sender, EventArgs e)
-        {
-
-        }
-
+        // Fetches the directory paths and sends them to be stored
         private void fetchFolderPath(int toOrFrom, TextBox inputFieldName)
         {
             folderBrowserDialog = new FolderBrowserDialog();
@@ -43,19 +48,16 @@ namespace FileMover
             {
                 if (inputFieldName.Text != "")
                 {
-                    Console.WriteLine("in if");
                     addFolderPath(toOrFrom, inputFieldName);
                 }
                 else
                 {
-                    Console.WriteLine("in else");
                     addFolderPath(toOrFrom, inputFieldName);
                 }
             }
         }
 
-        // TODO - If a field already has a directory path in it but a new path is chosen, find the old in the List<string>
-        // replace it with the new in order to maintain the correct order of directories in the List
+        // Adds directory paths to List<String> 
         private void addFolderPath(int toOrFrom, TextBox inputFieldName)
         {
             if (toOrFrom == 0)
@@ -95,145 +97,163 @@ namespace FileMover
         #region fromButtons
         private void fromBtn_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(toPathCode, fromInputOne);
+            fetchFolderPath(toPathCode, fromInput1);
         }
 
         private void fromBtnTwo_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(toPathCode, fromInputTwo);
+            fetchFolderPath(toPathCode, fromInput2);
         }
 
         private void fromBtnThree_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(toPathCode, fromInputThree);
+            fetchFolderPath(toPathCode, fromInput3);
         }
 
         private void fromBtnFour_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(toPathCode, fromInputFour);
+            fetchFolderPath(toPathCode, fromInput4);
         }
 
         private void fromBtnFive_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(toPathCode, fromInputFive);
+            fetchFolderPath(toPathCode, fromInput5);
         }
 
         private void fromBtnSix_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(toPathCode, fromInputSix);
+            fetchFolderPath(toPathCode, fromInput6);
         }
         #endregion
         #region toButtons
         private void button1_Click_1(object sender, EventArgs e)
         {
-            fetchFolderPath(fromPathCode, toInputOne);
+            fetchFolderPath(fromPathCode, toInput1);
         }
 
         private void toBtnTwo_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(fromPathCode, toInputTwo);
+            fetchFolderPath(fromPathCode, toInput2);
         }
 
         private void toBtnThree_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(fromPathCode, toInputThree);
+            fetchFolderPath(fromPathCode, toInput3);
         }
 
         private void toBtnFour_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(fromPathCode, toInputFour);
+            fetchFolderPath(fromPathCode, toInput4);
         }
 
         private void toBtnFive_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(fromPathCode, toInputFive);
+            fetchFolderPath(fromPathCode, toInput5);
         }
 
         private void toBtnSix_Click(object sender, EventArgs e)
         {
-            fetchFolderPath(fromPathCode, toInputSix);
+            fetchFolderPath(fromPathCode, toInput6);
         }
         #endregion
         #region executeButtons
         private void button1_Click(object sender, EventArgs e)
         {
-            MoveAllDataInDir(fromInputOne, toInputOne);
+            MoveAllDataInDir(fromInput1, toInput1);
         }
 
         private void executeBtnTwo_Click(object sender, EventArgs e)
         {
-            MoveAllDataInDir(fromInputTwo, toInputTwo);
+            MoveAllDataInDir(fromInput2, toInput2);
         }
 
         private void executeBtnThree_Click(object sender, EventArgs e)
         {
-            MoveAllDataInDir(fromInputThree, toInputThree);
+            MoveAllDataInDir(fromInput3, toInput3);
         }
 
         private void executeBtnFour_Click(object sender, EventArgs e)
         {
-            MoveAllDataInDir(fromInputFour, toInputFour);
+            MoveAllDataInDir(fromInput4, toInput4);
         }
 
         private void executeBtnFive_Click(object sender, EventArgs e)
         {
-            MoveAllDataInDir(fromInputFive, toInputFive);
+            MoveAllDataInDir(fromInput5, toInput5);
         }
 
         private void executeBtnSix_Click(object sender, EventArgs e)
         {
-            MoveAllDataInDir(fromInputSix, toInputSix);
+            MoveAllDataInDir(fromInput6, toInput6);
         }
 
         #endregion
         #region clearButtons
         private void button1_Click_2(object sender, EventArgs e)
         {
-            fromInputOne.Text = "";
-            fromInputTwo.Text = "";
-            fromInputThree.Text = "";
-            fromInputFour.Text = "";
-            fromInputFive.Text = "";
-            fromInputSix.Text = "";
+            ClearAll();
+        }
 
-            toInputOne.Text = "";
-            toInputTwo.Text = "";
-            toInputThree.Text = "";
-            toInputFour.Text = "";
-            toInputFive.Text = "";
-            toInputSix.Text = "";
+        private void ClearAll()
+        {
+            DialogResult dialogResult = MessageBox.Show("Do you wish to clear all directory paths.", "File Mover", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                fromInput1.Text = "";
+                fromInput2.Text = "";
+                fromInput3.Text = "";
+                fromInput4.Text = "";
+                fromInput5.Text = "";
+                fromInput6.Text = "";
 
-            folderPaths.Clear();
+                toInput1.Text = "";
+                toInput2.Text = "";
+                toInput3.Text = "";
+                toInput4.Text = "";
+                toInput5.Text = "";
+                toInput6.Text = "";
+
+                folderPaths.Clear();
+                toFolders.Clear();
+                fromFolders.Clear();
+
+                File.WriteAllText(documentsPath + @"\" + fromFileName, String.Empty);
+                File.WriteAllText(documentsPath + @"\" + toFileName, String.Empty);
+            }
+            else
+            {
+                return;
+            }
         }
 
         private void clearButton1_Click(object sender, EventArgs e)
         {
-            clearField(fromInputOne, toInputOne);
+            clearField(fromInput1, toInput1);
         }
 
         private void clearButton2_Click(object sender, EventArgs e)
         {
-            clearField(fromInputTwo, toInputTwo);
+            clearField(fromInput2, toInput2);
         }
 
         private void clearButton3_Click(object sender, EventArgs e)
         {
-            clearField(fromInputThree, toInputThree);
+            clearField(fromInput3, toInput3);
         }
 
         private void clearButton4_Click(object sender, EventArgs e)
         {
-            clearField(fromInputFour, toInputFour);
+            clearField(fromInput4, toInput4);
         }
 
         private void clearButton5_Click(object sender, EventArgs e)
         {
-            clearField(fromInputFive, toInputFive);
+            clearField(fromInput5, toInput5);
         }
 
         private void clearButton6_Click(object sender, EventArgs e)
         {
-            clearField(fromInputSix, toInputSix);
+            clearField(fromInput6, toInput6);
         }
 
         private void clearField(TextBox from, TextBox to)
@@ -246,10 +266,14 @@ namespace FileMover
         #endregion
         private void ExecuteAllBtn_Click(object sender, EventArgs e)
         {
-            onExit();
-            // TODO - Execute all move functions IF the FROM and TO directories dont override each other
-            // and skips over empty directory input fields
-            // TODO - Return this function to the executeButtons region when finished
+            int inputFieldNum = 1;
+            while (this.Controls.ContainsKey("fromInput" + inputFieldNum.ToString()))
+            {
+                TextBox fromInput = this.Controls["fromInput" + inputFieldNum.ToString()] as TextBox;
+                TextBox toinput = this.Controls["toInput" + inputFieldNum.ToString()] as TextBox;
+                MoveAllDataInDir(fromInput, toinput);
+                inputFieldNum++;
+            }
         }
 
         private void FetchAllDataInDir()
@@ -258,19 +282,10 @@ namespace FileMover
             // from the MoveAllDataInDir function
         }
 
-        // Gets the path to the Documents folder and begins the process of creating a folder and .txt directory path files
-        private void saveLastDirectories()
+        // Gets the path to the Documents folder and creates a folder and .txt directory path files
+        private void saveLastDirectories(string pathString)
         {
-            string documentsPath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            createFolder(documentsPath);
-        }
-
-        // Creates a folder named FileMover in which the directory path .txt files are stored
-        private void createFolder(string pathString)
-        {
-            string fileName = "FileMover";
-            pathString = System.IO.Path.Combine(pathString, fileName);
-            
+            string sFolderPaths = "";
             if (!System.IO.Directory.Exists(pathString))
             {
                 System.IO.Directory.CreateDirectory(pathString);
@@ -279,13 +294,7 @@ namespace FileMover
             {
                 Console.WriteLine("Folder \"{0}\" already exists.", fileName);
             }
-
-            string sFolderPaths = "";
-            string fromFileName = "fromFilePaths.txt";
             writeSaveFile(fromFolders, sFolderPaths, pathString, fromFileName);
-
-            sFolderPaths = "";
-            string toFileName = "toFilePaths.txt";
             writeSaveFile(toFolders, sFolderPaths, pathString, toFileName);
         }
 
@@ -293,25 +302,71 @@ namespace FileMover
         private void writeSaveFile(List<string> folders, string sFoldersPath, string documentsPath, string toOrFrom)
         {
             int i = 0;
-            foreach (var item in folders)
+            if (folders != null)
             {
-                sFoldersPath += item + "\n";
-                Console.WriteLine(sFoldersPath);
-                if (i < folders.Count)
+                foreach (var item in folders)
                 {
-                    File.WriteAllText(documentsPath + @"\" + toOrFrom, sFoldersPath);
+                    sFoldersPath += item + "\n";
+                    Console.WriteLine(sFoldersPath);
+                    if (i < folders.Count)
+                    {
+                        File.WriteAllText(documentsPath + @"\" + toOrFrom, sFoldersPath);
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
-                else
-                {
-                    i++;
-                }
-            }
+            } 
+            
         }
 
+        // Loads last used directories from save file
         private void loadLastDirectories()
         {
-            File.OpenText("");
-            // TODO - Load last used directories from save file
+            // True = "To" directories
+            // False = "From" directories
+            string toFileName = "toFilePaths.txt";
+            string toFileStringified = File.ReadAllText(documentsPath + @"\" + toFileName);
+
+            InputFieldsFromLoad(true, toFileStringified);
+
+            string fromFileName = "fromFilePaths.txt";
+            string fromFileStringified = File.ReadAllText(documentsPath + @"\" + fromFileName);
+
+            InputFieldsFromLoad(false, fromFileStringified);
+        }
+
+        // Used to populate the to and from fields
+        private void InputFieldsFromLoad(bool toOrFrom, string stringToSlice)
+        {
+            string[] folders = stringToSlice.Split('\n');
+            int inputFieldNum = 1;
+            foreach (string folder in folders)
+            {
+                if (toOrFrom == true && folder != "")
+                {
+                    if (this.Controls.ContainsKey("toInput" + inputFieldNum.ToString()))
+                    {
+                        TextBox txtBox = this.Controls["toInput" + inputFieldNum.ToString()] as TextBox;
+                        txtBox.Text = folder;
+                        toFolders.Add(folder);
+                        inputFieldNum++;
+                    }
+                }
+                if (toOrFrom != true && folder != "")
+                {
+                    if (this.Controls.ContainsKey("fromInput" + inputFieldNum.ToString()))
+                    {
+                        TextBox txtBox = this.Controls["fromInput" + inputFieldNum.ToString()] as TextBox;
+                        txtBox.Text = folder;
+                        fromFolders.Add(folder);
+                        inputFieldNum++;
+                    }
+                }
+                Console.WriteLine(folder);
+            }
+            inputFieldNum = 1;
         }
 
         private void MoveAllDataInDir(TextBox fromInput, TextBox toInput)
@@ -391,10 +446,20 @@ namespace FileMover
             Console.WriteLine(toDate);
         }
 
-        // TODO - Make the app save data on exit
-        private void onExit()
+        // Saves data on exit
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            saveLastDirectories();
+            saveLastDirectories(this.documentsPath);
+            DialogResult dialogResult = MessageBox.Show("Directory paths have been saved", "File Mover", MessageBoxButtons.OK);
+            if (dialogResult == DialogResult.OK)
+            {
+                return;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            loadLastDirectories();
         }
     }
 }
