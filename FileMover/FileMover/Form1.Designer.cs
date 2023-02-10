@@ -91,6 +91,8 @@
             this.clearButton4 = new System.Windows.Forms.Button();
             this.clearButton5 = new System.Windows.Forms.Button();
             this.clearButton6 = new System.Windows.Forms.Button();
+            this.radioButtonDateCreated = new System.Windows.Forms.RadioButton();
+            this.radioButtonDateModified = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // executeBtnOne
@@ -679,11 +681,37 @@
             this.clearButton6.UseVisualStyleBackColor = false;
             this.clearButton6.Click += new System.EventHandler(this.clearButton6_Click);
             // 
+            // radioButtonDateCreated
+            // 
+            this.radioButtonDateCreated.AutoSize = true;
+            this.radioButtonDateCreated.Checked = true;
+            this.radioButtonDateCreated.Location = new System.Drawing.Point(266, 294);
+            this.radioButtonDateCreated.Name = "radioButtonDateCreated";
+            this.radioButtonDateCreated.Size = new System.Drawing.Size(88, 17);
+            this.radioButtonDateCreated.TabIndex = 33;
+            this.radioButtonDateCreated.TabStop = true;
+            this.radioButtonDateCreated.Text = "Date Created";
+            this.radioButtonDateCreated.UseVisualStyleBackColor = true;
+            this.radioButtonDateCreated.CheckedChanged += new System.EventHandler(this.radioButtonDateCreated_CheckedChanged);
+            // 
+            // radioButtonDateModified
+            // 
+            this.radioButtonDateModified.AutoSize = true;
+            this.radioButtonDateModified.Location = new System.Drawing.Point(368, 294);
+            this.radioButtonDateModified.Name = "radioButtonDateModified";
+            this.radioButtonDateModified.Size = new System.Drawing.Size(91, 17);
+            this.radioButtonDateModified.TabIndex = 33;
+            this.radioButtonDateModified.TabStop = true;
+            this.radioButtonDateModified.Text = "Date Modified";
+            this.radioButtonDateModified.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 593);
+            this.Controls.Add(this.radioButtonDateModified);
+            this.Controls.Add(this.radioButtonDateCreated);
             this.Controls.Add(this.clearButton6);
             this.Controls.Add(this.clearButton5);
             this.Controls.Add(this.clearButton4);
@@ -819,6 +847,8 @@
         private System.Windows.Forms.Button clearButton4;
         private System.Windows.Forms.Button clearButton5;
         private System.Windows.Forms.Button clearButton6;
+        private System.Windows.Forms.RadioButton radioButtonDateCreated;
+        private System.Windows.Forms.RadioButton radioButtonDateModified;
     }
 }
 

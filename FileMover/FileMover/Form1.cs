@@ -383,21 +383,34 @@ namespace FileMover
                 incrementLoadingBar(0, 0);
                 foreach (var fileName in dirFilesCount)
                 {
+                    // TODO Test out fetching of date created for all files that are being moved
+
                     files.Add(fileName.ToString());
                     FilesRemainingLabel.Text = files.Count.ToString();
-                    Console.WriteLine(files.Count);
+                    //Console.WriteLine(files.Count);
                     string moveFrom = fromInput.Text + @"\" + fileName.ToString();
                     string moveTo = toInput.Text + @"\" + fileName.ToString();
-                    moveFiles(moveFrom, moveTo);
-                    Console.WriteLine(increment);
-                    if (files.Count != dirFilesCount.Count())
-                    {
-                        incrementLoadingBar(increment, 1);
-                    }
-                    else if (files.Count == dirFilesCount.Count())
-                    {
-                        incrementLoadingBar(100, 2);
-                    }
+
+
+                    DateTime creation = File.GetCreationTime(moveFrom);
+                    DateTime modification = File.GetLastWriteTime(moveFrom);
+                    Console.WriteLine(creation);
+                    Console.WriteLine(modification);
+
+                    Console.WriteLine(radioButtonDateCreated.Checked);
+                    Console.WriteLine(radioButtonDateModified.Checked);
+
+
+                    //moveFiles(moveFrom, moveTo);
+                    //Console.WriteLine(increment);
+                    //if (files.Count != dirFilesCount.Count())
+                    //{
+                    //    incrementLoadingBar(increment, 1);
+                    //}
+                    //else if (files.Count == dirFilesCount.Count())
+                    //{
+                    //    incrementLoadingBar(100, 2);
+                    //}
                 }
                 Console.WriteLine("Executed Move");
             }
@@ -460,6 +473,11 @@ namespace FileMover
         private void Form1_Load(object sender, EventArgs e)
         {
             loadLastDirectories();
+        }
+
+        private void radioButtonDateCreated_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
