@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace FileMover
 {
 
-    public partial class Form1 : Form
+    public partial class FormFileMover : Form
     {
         private List<string> folderPaths;
         private FolderBrowserDialog folderBrowserDialog;
@@ -26,7 +26,7 @@ namespace FileMover
         private string fileName;
         private string fromFileName = "fromFilePaths.txt";
         private string toFileName = "toFilePaths.txt";
-        public Form1()
+        public FormFileMover()
         {
             InitializeComponent();
 
@@ -282,6 +282,7 @@ namespace FileMover
             // from the MoveAllDataInDir function
         }
 
+        // TODO - Saving paths is still wonky, fix it
         // Gets the path to the Documents folder and creates a folder and .txt directory path files
         private void saveLastDirectories(string pathString)
         {
@@ -317,8 +318,7 @@ namespace FileMover
                         i++;
                     }
                 }
-            } 
-            
+            }
         }
 
         // Loads last used directories from save file
@@ -327,14 +327,19 @@ namespace FileMover
             // True = "To" directories
             // False = "From" directories
             string toFileName = "toFilePaths.txt";
-            string toFileStringified = File.ReadAllText(documentsPath + @"\" + toFileName);
-
-            InputFieldsFromLoad(true, toFileStringified);
-
             string fromFileName = "fromFilePaths.txt";
-            string fromFileStringified = File.ReadAllText(documentsPath + @"\" + fromFileName);
+            try
+            {
+                string toFileStringified = File.ReadAllText(documentsPath + @"\" + toFileName);
+                string fromFileStringified = File.ReadAllText(documentsPath + @"\" + fromFileName);
+                InputFieldsFromLoad(true, toFileStringified);
+                InputFieldsFromLoad(false, fromFileStringified);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("First load of software, no load paths set, will create paths on exit.");
+            }
 
-            InputFieldsFromLoad(false, fromFileStringified);
         }
 
         // Used to populate the to and from fields
@@ -373,18 +378,17 @@ namespace FileMover
         {
             try
             {
-                // TODO - Clean this mess up <3
                 List<string> files = new List<string>();
                 DirectoryInfo dir = new DirectoryInfo(fromInput.Text);
                 FileInfo[] dirFilesCount = dir.GetFiles("*");
                 //Does the same as the "*" but with more RegEx for customisation, will keep it as a backup
                 //FileInfo[] dirFilesCount = dir.GetFiles("*" + @"." + "*");
+
                 int increment = 100 / dirFilesCount.Count();
                 incrementLoadingBar(0, 0);
+
                 foreach (var fileName in dirFilesCount)
                 {
-                    // TODO Test out fetching of date created for all files that are being moved
-
                     files.Add(fileName.ToString());
                     FilesRemainingLabel.Text = files.Count.ToString();
                     //Console.WriteLine(files.Count);
@@ -394,23 +398,58 @@ namespace FileMover
 
                     DateTime creation = File.GetCreationTime(moveFrom);
                     DateTime modification = File.GetLastWriteTime(moveFrom);
-                    Console.WriteLine(creation);
-                    Console.WriteLine(modification);
 
-                    Console.WriteLine(radioButtonDateCreated.Checked);
-                    Console.WriteLine(radioButtonDateModified.Checked);
+                    if (radioButtonDateCreated.Checked == true && fromDateTimePicker.Value.Date != toDateTimePicker.Value.Date && fromDateTimePicker.Value.Date < toDateTimePicker.Value.Date)
+                    {
+                        if (creation.Date <= toDateTimePicker.Value.Date && creation.Date >= fromDateTimePicker.Value.Date)
+                        {
+                            moveFiles(moveFrom, moveTo);
 
+                            //Console.WriteLine("File created on: " + creation.Date);
+                            //Console.WriteLine(radioButtonDateCreated.Checked);
+                            //Console.WriteLine("From: " + fromDateTimePicker.Value.Date.ToString());
+                            //Console.WriteLine("To: " + toDateTimePicker.Value.Date.ToString());
+                            //Console.WriteLine(moveFrom.ToString());
+                            //Console.WriteLine(moveTo.ToString());
+                        }
+                        else
+                        {
+                            Console.WriteLine("Found files that do not match this criterium");
+                        }
+                    }
+                    else if (radioButtonDateModified.Checked == true && fromDateTimePicker.Value.Date != toDateTimePicker.Value.Date && fromDateTimePicker.Value.Date < toDateTimePicker.Value.Date)
+                    {
+                        if (modification.Date <= toDateTimePicker.Value.Date && modification.Date >= fromDateTimePicker.Value.Date)
+                        {
+                            moveFiles(moveFrom, moveTo);
 
-                    //moveFiles(moveFrom, moveTo);
+                            //Console.WriteLine("File modified on: " + modification.Date);
+                            //Console.WriteLine(radioButtonDateModified.Checked);
+                            //Console.WriteLine("From: " + fromDateTimePicker.Value.Date.ToString());
+                            //Console.WriteLine("To: " + toDateTimePicker.Value.Date.ToString());
+                            //Console.WriteLine(moveFrom.ToString());
+                            //Console.WriteLine(moveTo.ToString());
+                        }
+                        else
+                        {
+                            Console.WriteLine("Found files that do not match this criterium");
+                        }
+                    }
+                    else
+                    {
+                        DialogResult dialogResult = MessageBox.Show("Invalid date format", "File Mover", MessageBoxButtons.OK);
+                        return;
+                    }
+
                     //Console.WriteLine(increment);
-                    //if (files.Count != dirFilesCount.Count())
-                    //{
-                    //    incrementLoadingBar(increment, 1);
-                    //}
-                    //else if (files.Count == dirFilesCount.Count())
-                    //{
-                    //    incrementLoadingBar(100, 2);
-                    //}
+                    if (files.Count != dirFilesCount.Count())
+                    {
+                        incrementLoadingBar(increment, 1);
+                    }
+                    else if (files.Count == dirFilesCount.Count())
+                    {
+                        incrementLoadingBar(100, 2);
+                    }
                 }
                 Console.WriteLine("Executed Move");
             }
@@ -418,7 +457,7 @@ namespace FileMover
             {
                 MessageBox.Show("Directory path is empty, please input a valid path.");
             }
-            
+
         }
 
         private void moveFiles(string moveFrom, string moveTo)
@@ -450,13 +489,11 @@ namespace FileMover
         private void fromDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             fromDate = fromDateTimePicker.Value;
-            Console.WriteLine(fromDate);
         }
 
         private void toDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             toDate = toDateTimePicker.Value;
-            Console.WriteLine(toDate);
         }
 
         // Saves data on exit
